@@ -17,8 +17,8 @@ const Navigation = ({ active, setActive }) => {
     <div className="user-con">
         <img src={avatar} alt="" />
         <div className="text">
-            <h2>Mike</h2>
-            <p>Your Money</p>
+            <h2>Logesh</h2>
+            <p>Tracker your Money</p>
         </div>
     </div>
     <div className="nav-close" onClick={() => setIsOpen(false)}>
