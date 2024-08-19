@@ -2,16 +2,17 @@ import styled from 'styled-components'
 import avatar from "../../img/avatar.png"
 import { close, signout } from '../../utils/Icons'
 import { menuItems } from '../../utils/menuItems'
-import Button from '../Button/Button'
 import exportCSV from '../../ExportCSV/ExportCSV'
 import { useGlobalContext } from '../../context/globalContext'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 // eslint-disable-next-line react/prop-types
 const Navigation = ({ active, setActive }) => {
     const { incomes, expense } = useGlobalContext();
     const [isOpen, setIsOpen] = useState(true);
+    const navigate = useNavigate();
   return (
     <NavStyled>
     <div className="user-con">
@@ -46,9 +47,9 @@ const Navigation = ({ active, setActive }) => {
             onClick={()=> exportCSV([...incomes, ...expense])}
           > Export button</button>
         </div>
-        <li>
+        <button className='button-signout' onClick={()=> navigate('/login')}>
             {signout} Sign Out
-        </li>
+        </button>
     </div>
 </NavStyled>
   )
@@ -95,6 +96,11 @@ const NavStyled = styled.nav`
     }
     .color-button:hover{
         cursor: pointer;
+    }
+    .button-signout {
+        background-color: #F9F4F6;
+        color: #000;
+        padding: 8px;
     }
 
     .menu-items{

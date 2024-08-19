@@ -92,7 +92,7 @@ const ExpenseForm = () => {
                     icon={plus}
                     bPad={'.8rem 1.6rem'}
                     bRad={'30px'}
-                    bg={'var(--color-accent'}
+                    className="button-color"
                     color={'#fff'}
                 />
             </div>
@@ -126,6 +126,9 @@ const ExpenseFormStyled = styled.form`
             width: 100%;
         }
     }
+    .button-color{
+        color: black;
+    }
 
     .selects{
         display: flex;
@@ -145,6 +148,6 @@ const ExpenseFormStyled = styled.form`
                 background: var(--color-green) !important;
             }
         }
-    }
+    };
 `;
 export default ExpenseForm
