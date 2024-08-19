@@ -49,15 +49,25 @@ const Dashboard = () => {
               Min <span>Salary</span> Max
             </h2>
             <div className="salary-item">
-              <p>${Math.min(...incomes.map((item) => item.amount))}</p>
-              <p>${Math.max(...incomes.map((item) => item.amount))}</p>
+              <p>${
+              Math.min(...incomes.map((item) => item.amount)) ?  Math.min(...incomes.map((item) => item.amount)) : 0
+              }</p>
+              <p>${
+              Math.max(...incomes.map((item) => item.amount)) ?  Math.max(...incomes.map((item) => item.amount)) : 0
+            }
+            </p>
             </div>
             <h2 className="salary-title">
               Min <span>Expense</span> Max{" "}
             </h2>
             <div className="salary-item">
-              <p>${Math.min(...expense.map((item) => item.amount))}</p>
-              <p>${Math.max(...expense.map((item) => item.amount))}</p>
+            <p>${
+              Math.min(...expense.map((item) => item.amount)) ?  Math.min(...incomes.map((item) => item.amount)) : 0
+              }</p>
+              <p>${
+              Math.max(...expense.map((item) => item.amount)) ?  Math.max(...incomes.map((item) => item.amount)) : 0
+            }
+            </p>
             </div>
           </div>
         </div>
