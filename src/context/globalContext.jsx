@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const GlobalContext = createContext();
 
-const BASE_URL = "http://localhost:5050/api/v1/"
+const BASE_URL = "https://tracker-backend-omwi.onrender.com/api/v1/"
 
 
 // eslint-disable-next-line react/prop-types
