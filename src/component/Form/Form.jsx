@@ -98,7 +98,7 @@ useEffect(()=>{
                     icon={plus}
                     bPad={'.8rem 1.6rem'}
                     bRad={'30px'}
-                    bg={'var(--color-accent'}
+                    className="income-color"
                     color={'#fff'}
                 />
             </div>
@@ -124,6 +124,9 @@ const FormStyled = styled.form`
         &::placeholder{
             color: rgba(34, 34, 96, 0.4);
         }
+    }
+    .income-color {
+        color: black;
     }
     .input-control{
         input{
